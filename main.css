@@ -45,7 +45,7 @@ header .btn-menu{
     cursor: pointer;
     background-color: transparent;
 }
-    /*******linhas que formam o botao*******/
+/*******linhas que formam o botao*******/
 header .btn-menu span {
     display: block;
     width: 100%;
@@ -54,14 +54,13 @@ header .btn-menu span {
     border-radius: 2px;
     transition: all 0.3s ease;
 }
-
 /* ===============================================
    CARROSSEL
    =============================================== */
 
 section .carrosel img{
     width: 100%;
-    height: 230px;
+    height: 250px;
     object-fit: cover;
     filter: brightness(0.6);
 }
@@ -115,6 +114,35 @@ section .menu-lateral.ativo {
     font-size: 24px; 
     font-family: "Archivo Black", sans-serif; 
 }
+section .secao-filmes-grid{
+    margin:20px ;
+}
+section .secao-filmes-grid .texto-filmes{
+    
+    width: 100%;
+    margin-left: 0px;
+    align-items: center;
+}
+section .secao-filmes-grid .texto-filmes h2{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.parent > img {
+    height: 230px;
+    margin: 0 8px; 
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px #2a272a;
+}
+
+/* Adiciona espaço para o box-shadow aparecer no Slick Carousel */
+
+.slick-list{
+    padding-top: 10px  !important;
+    padding-bottom: 10px !important;
+}
+
 
 /* ===============================================
     RESPONSIVIDADE (TELAS MAIORES)
@@ -138,7 +166,7 @@ section .menu-lateral.ativo {
         width: 320px;
     }
     .menu-lateral .conteudo-principal-menu > header{
-        padding: 38px;
+        padding: 37px;
     }
     .menu-lateral h2 {
         font-size: 32px; /* Aumenta o título em telas maiores */

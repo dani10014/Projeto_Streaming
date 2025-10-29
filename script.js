@@ -8,10 +8,15 @@ $(document).ready(function(){
         arrows:false,
     });
     
+    $('.parent').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows:true,
+    });
+    
     $btnMenu.on('click', function(){
         $menuLateral.toggleClass('ativo');
     });
-
 
     $(document).on('click',function(event){
         if ($menuLateral.hasClass('ativo') && !$(event.target).closest($menuLateral).length && !$(event.target).closest($btnMenu).length) {
