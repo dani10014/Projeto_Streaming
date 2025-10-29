@@ -111,6 +111,11 @@ section .menu-lateral.ativo {
     color: red;
 }
 
+.menu-lateral h2 {
+    font-size: 24px; 
+    font-family: "Archivo Black", sans-serif; 
+}
+
 /* ===============================================
     RESPONSIVIDADE (TELAS MAIORES)
    =============================================== */
@@ -134,6 +139,9 @@ section .menu-lateral.ativo {
     }
     .menu-lateral .conteudo-principal-menu > header{
         padding: 38px;
+    }
+    .menu-lateral h2 {
+        font-size: 32px; /* Aumenta o título em telas maiores */
     }
     header .container-cabecalho img{
         height: 60px;
