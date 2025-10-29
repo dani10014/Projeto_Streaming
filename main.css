@@ -102,7 +102,7 @@ section .menu-lateral.ativo {
 }
 /* Header dentro do menu lateral */
 .menu-lateral .conteudo-principal-menu > header{
-    padding: 28px;
+    padding: 27px;
     box-shadow: 0 5px 5px #000000b9;
     color: #fff;
 }
