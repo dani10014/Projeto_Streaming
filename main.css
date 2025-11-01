@@ -131,11 +131,11 @@ section .secao-filmes-grid .texto-filmes h2{
     width: 100%; 
     margin: 0 auto; 
 }
-.parent > img {
-    height: 230px;
+.parent > .slick-list img {
+    height: 200px !important;
+    width: 100px !important; 
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 5px 10px #2a272a;
     
 }
 
