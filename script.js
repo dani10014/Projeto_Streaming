@@ -9,9 +9,10 @@ $(document).ready(function(){
     });
     
     $('.parent').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        arrows:true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows:false,
+        dots:true,
     });
     
     $btnMenu.on('click', function(){

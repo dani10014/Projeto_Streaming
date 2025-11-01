@@ -5,7 +5,7 @@
 }
 
 /* ===============================================
-   HEADER PRINCIPAL
+    HEADER PRINCIPAL
    =============================================== */
 
 body > header{
@@ -15,14 +15,12 @@ body > header{
     background-color: rgb(27, 27, 27);
     box-shadow: 0 5px 5px #000000b9;
     top: 0;
+    z-index: 1;
     width: 100%;
-    z-index: 50;
 }
 body{
     background-color: #2a272a;
-}
-main {
-    padding-top: 80px;
+    margin-top: 70px;
 }
 header .container-cabecalho{
     display: flex;
@@ -55,7 +53,7 @@ header .btn-menu span {
     transition: all 0.3s ease;
 }
 /* ===============================================
-   CARROSSEL
+    CARROSSEL
    =============================================== */
 
 section .carrosel img{
@@ -79,9 +77,8 @@ section .carrosel img{
     z-index: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
 /* ===============================================
-   MENU LATERAL
+    MENU LATERAL
    =============================================== */
 
 section .menu-lateral{
@@ -109,38 +106,37 @@ section .menu-lateral.ativo {
 .menu-lateral .conteudo-principal-menu .container-conteudo-header span{
     color: red;
 }
-
 .menu-lateral h2 {
     font-size: 24px; 
     font-family: "Archivo Black", sans-serif; 
 }
-section .secao-filmes-grid{
-    margin:20px ;
-}
 section .secao-filmes-grid .texto-filmes{
-    
     width: 100%;
     margin-left: 0px;
     align-items: center;
 }
 section .secao-filmes-grid .texto-filmes h2{
-    color: #fff;
-    margin-bottom: 20px;
+    color: #cfcccc;
+    margin: 20px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-
+.titulo-filme-carrousel{
+    position: absolute;
+    color: #fff;
+    top: 0;
+}
+.parent{
+    width: 100%; 
+    margin: 0 auto; 
+}
 .parent > img {
     height: 230px;
-    margin: 0 8px; 
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 5px 10px #2a272a;
-}
-
-/* Adiciona espaço para o box-shadow aparecer no Slick Carousel */
-
-.slick-list{
-    padding-top: 10px  !important;
-    padding-bottom: 10px !important;
+    
 }
 
 
@@ -152,12 +148,15 @@ section .secao-filmes-grid .texto-filmes h2{
     body > header{
         padding: 25px;
     }
-    section .texto-destaque h2{
-        font-size: 32px;
+    .parent > .slick-list img{
+        height: 400px !important;
+        width: 300px !important;
     }
-    section .carrosel img{
-        height: 50vh; 
-        object-fit: cover;
+    .parent > .slick-list img:hover{
+    transform: translateY(-20px) scale(1.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 10px black;
+    filter: brightness(0.5);
     }
     .titulo-filme {
         font-size: 28px;
@@ -176,7 +175,7 @@ section .secao-filmes-grid .texto-filmes h2{
         transform: scale(1.9);
     }
     main {
-        padding-top: 110px; 
+        padding-top: 30px; 
     }
 }
 
