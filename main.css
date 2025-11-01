@@ -21,6 +21,7 @@ body > header{
 body{
     background-color: #2a272a;
     margin-top: 70px;
+    margin-bottom: 100px;
 }
 header .container-cabecalho{
     display: flex;
@@ -62,7 +63,7 @@ section .carrosel img{
     object-fit: cover;
     filter: brightness(0.6);
 }
-/* Contêiner de cada slide para posicionar o título */
+/* Contêiner de cada slirgb(27, 27, 27)de para posicionar o título */
 .slide-item {
     position: relative;
 }
@@ -106,6 +107,13 @@ section .menu-lateral.ativo {
 .menu-lateral .conteudo-principal-menu .container-conteudo-header span{
     color: red;
 }
+.menu-lateral .conteudo-principal-menu section button{
+    margin-top: 5px;
+    width: 100%;
+    background-color: #00000000;
+    color: #fff;
+    border: none;
+}
 .menu-lateral h2 {
     font-size: 24px; 
     font-family: "Archivo Black", sans-serif; 
@@ -133,20 +141,90 @@ section .secao-filmes-grid .texto-filmes h2{
 }
 .parent > .slick-list img {
     height: 200px !important;
-    width: 100px !important; 
+    width: 120px !important; 
     object-fit: cover;
     border-radius: 8px;
     
 }
-
-
+section .btn-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50vw;
+    height: 25px;
+    cursor: pointer;
+    background-color:rgba(27, 27, 27, 0);
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+}
+.btn-nav .sumir{
+    transform: translateY(100%);
+}
+section .nav .btn-esconder-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 236, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+section .btn-nav span{
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.534);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+section .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 70px;
+    z-index: 100;
+    background-color: rgb(27, 27, 27);
+    transform: translateY(100px);
+    transition: transform 0.3s ease-in-out;
+} 
+.nav.nav-ativo{
+    transform: translateY(0);
+}
+section .nav button{
+    width: 80%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-left:1px solid #7979796b;
+    border-right:1px solid #7979796b;
+    font-family: "Archivo Black", sans-serif;
+}
+section .nav :hover{
+    background-color: rgba(56, 55, 55, 0.719);
+    border-bottom: 2px solid #000000;
+}
 /* ===============================================
     RESPONSIVIDADE (TELAS MAIORES)
    =============================================== */
 
 @media ( min-width: 765px){
     body > header{
-        padding: 25px;
+        padding: 12px;
     }
     .parent > .slick-list img{
         height: 400px !important;
@@ -165,7 +243,7 @@ section .secao-filmes-grid .texto-filmes h2{
         width: 320px;
     }
     .menu-lateral .conteudo-principal-menu > header{
-        padding: 37px;
+        padding: 24px;
     }
     .menu-lateral h2 {
         font-size: 32px; /* Aumenta o título em telas maiores */
@@ -173,9 +251,6 @@ section .secao-filmes-grid .texto-filmes h2{
     header .container-cabecalho img{
         height: 60px;
         transform: scale(1.9);
-    }
-    main {
-        padding-top: 30px; 
     }
 }
 
