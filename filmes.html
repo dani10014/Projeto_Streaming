@@ -1,22 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seção Filmes</title>
-    <link rel="stylesheet" href="main-filmes.css">
+    <title>WatchS</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container-cabecalho">
-            <img src="./imagens/Screenshot_20251028_124330_Canva-removebg-preview.png"alt="Logo">
-        <div class="btn-menu">
-            <span></span>
-            <span></span>
-            <span></span>            
+    <!-- 'page-wrapper' é usado para a animação de transição de página -->
+    <div class="page-wrapper">
+        <header>
+            <div class="container-cabecalho">
+                <img src="./imagens/Screenshot_20251028_124330_Canva-removebg-preview.png"alt="Logo">
+            <div class="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>            
+            </div>
+            </div>
+        </header>
+        <main> 
+            <!-- Seção vazia, pode ser usada para um carrossel ou outro conteúdo -->
+            <section> 
+            </section>
+            <!-- Seção da Grade de Filmes -->
+            <section>
+                    <div class="secao-filmes-grid">
+                        <div class="texto-filmes">
+                            <h2>Filmes</h2>
+                        </div>
+                    <div class="parent">
+                            <img src="./imagens/bb0c3399-f70b-4cdd-bfe2-759cb7f34943.png">
+                            <img src="./imagens/bb0c3399-f70b-4cdd-bfe2-759cb7f34943.png">
+                            <img src="./imagens/bb0c3399-f70b-4cdd-bfe2-759cb7f34943.png">
+                            <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
+                            <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
+                            <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
+                            <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
+                    </div>
+            </section>
+            <!-- Seção da Grade de Séries -->
+            <section>
+                    <div class="secao-filmes-grid">
+                        <div class="texto-filmes">
+                            <h2>Series</h2>
+                        </div>
+                    <div class="parent">
+                            <img src="./imagens/bb0c3399-f70b-4cdd-bfe2-759cb7f34943.png">
+                            <img src="./imagens/bb0c3399-f70b-4cdd-bfe2-759cb7f34943.png">
+                            <img src="./imagens/bb0c3399-f70b-4cdd-bfe2-759cb7f34943.png">
+                            <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
+                            <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
+                            <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
+                            <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
+                    </div>
+            </section>
+            <!-- Seção da Barra de Navegação Inferior -->
+            <section>
+                <div class="btn-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav">
+                    <button class="btn-esconder-nav">X</button> <!-- Botão para fechar a navegação -->
+                    <button class="btn-inicio">Inicio</button>
+                    <button class="btn-filmes">Filmes</button>
+                    <button class="btn-series">Series</button>
+                    <button class="btn-animacoes">Animações</button>
+                    <button class="btn-animes">Animes</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="menu-lateral">
+        <!-- Conteúdo do Menu que desliza da lateral -->
+        <div class="conteudo-principal-menu">
+            <header>
+                <div class="container-conteudo-header">
+                    <h2>Watch<span>S</span></h2>
+                </div>
+            </header>
+            <section>
+                <div class="botoes-menu-lateral">
+                    <button><a href="#"><h3>Login</h3></a></button>
+                    <button><a href="#"><h3>Favoritos</h3></a></button>
+                    <button><a href="#"><h3>Salvos</h3></a></button>
+                <div class="configuração-e-email">
+                    <button><a href="#"><h3>Configurações</h3></a></button>
+                    <button><a href="#"><h3>Gmail</h3></a></button>
+                </div>
+                </div>
+            </section>
         </div>
-        </div>
-    </header>
-    <script src="./script-filmes.js"></script>
+    </div>
+    <!-- Scripts JavaScript (jQuery, Slick Carousel e o script específico desta página) -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script-filmes.js"></script>
 </body>
 </html>

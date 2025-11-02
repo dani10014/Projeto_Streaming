@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Configurações do cabeçalho do documento (metadados) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WatchS</title>
+    <!-- Links para folhas de estilo (CSS) -->
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Links para fontes do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 'page-wrapper' é usado para a animação de transição de página -->
     <div class="page-wrapper">
         <header>
             <div class="container-cabecalho">
@@ -24,7 +28,8 @@
             </div>
         </header>
         <main> 
-            <section> 
+            <!-- Seção do Carrossel de Imagens -->
+            <section>
                 <div class="carrosel">
                     <div class="slide-item">
                         <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
@@ -35,6 +40,8 @@
                         <h3 class="titulo-filme">Godzilla e Kong: O Novo Império</h3>
                     </div>
                 </div>
+            </section>
+            <!-- Seção da Grade de Filmes -->
             <section>
                     <div class="secao-filmes-grid">
                         <div class="texto-filmes">
@@ -50,6 +57,7 @@
                             <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
                     </div>
             </section>
+            <!-- Seção da Grade de Séries -->
             <section>
                     <div class="secao-filmes-grid">
                         <div class="texto-filmes">
@@ -65,6 +73,7 @@
                             <img src="./imagens/6bba9d4a-f707-499d-8458-b8fa38cb8715.png">
                     </div>
             </section>
+            <!-- Seção da Barra de Navegação Inferior -->
             <section>
                 <div class="btn-nav">
                     <span></span>
@@ -73,6 +82,7 @@
                 </div>
                 <div class="nav">
                     <button class="btn-esconder-nav">X</button>
+                    <button class="btn-inicio">Inicio</button>
                     <button class="btn-filmes">Filmes</button>
                     <button class="btn-series">Series</button>
                     <button class="btn-animacoes">Animações</button>
@@ -81,7 +91,9 @@
             </section>
         </main>
     </div>
+    </div>
     <div class="menu-lateral">
+        <!-- Conteúdo do Menu que desliza da lateral -->
         <div class="conteudo-principal-menu">
             <header>
                 <div class="container-conteudo-header">
@@ -101,6 +113,7 @@
             </section>
         </div>
     </div>
+    <!-- Scripts JavaScript (jQuery, Slick Carousel e seu script personalizado) -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

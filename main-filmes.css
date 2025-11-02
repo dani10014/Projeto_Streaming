@@ -1,13 +1,14 @@
+/* Reset básico para remover margens e preenchimentos padrão */
 *{
+    padding:0;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
-    body{
-    background-color: #2a272a;
-    transition: all 0.3s ease-in-out;
-    transform: translateX(100%);
-}
+/* ===============================================
+    HEADER PRINCIPAL
+   =============================================== */
+
+/* Estilo do cabeçalho fixo no topo da página */
 body > header{
     position: fixed;
     color: white;
@@ -18,7 +19,21 @@ body > header{
     z-index: 1;
     width: 100%;
 }
+/* Estilo base do corpo da página */
+body{
+    background-color: #2a272a;
+    padding-top: 500px;
+}
+.page-wrapper {
+    /* Contêiner principal para a animação de transição */
+    width: 100%;
+    overflow-x: hidden; /* Evita barras de rolagem durante a animação */
+    margin-top: 70px;
+    margin-bottom: 100px;
+    transition: all 0.3s ease-in-out;
+}
 header .container-cabecalho{
+    /* Alinhamento dos itens dentro do cabeçalho (logo e botão de menu) */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,12 +41,14 @@ header .container-cabecalho{
 /* Logo */
 header .container-cabecalho img{
     height: 50px;
+    /* Tamanho e posicionamento do logo */
     transform: scale(1.7);
     transform-origin: left center;
 }
 /* Botão de Menu (Hamburger) */
 header .btn-menu{
     display: flex;
+    /* Estilo do botão de menu (três linhas) */
     flex-direction: column;
     justify-content: space-around;
     width: 25px;
@@ -41,10 +58,278 @@ header .btn-menu{
 }
 /*******linhas que formam o botao*******/
 header .btn-menu span {
+    /* Estilo de cada linha do botão de menu */
     display: block;
     width: 100%;
     height: 3px;
     background-color: white;
     border-radius: 2px;
+    transition: all 0.20s ease;
+}
+/* ===============================================
+    CARROSSEL
+   =============================================== */
+
+section .carrosel img{
+    /* Estilo das imagens dentro do carrossel */
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+/* Contêiner de cada slirgb(27, 27, 27)de para posicionar o título */
+.slide-item {
+    position: relative;
+}
+/* Título do filme sobre a imagem */
+.titulo-filme {
+    /* Posicionamento e estilo do título sobre a imagem do carrossel */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+/* ===============================================
+    MENU LATERAL
+   =============================================== */
+
+/* Estilo do contêiner do menu lateral */
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    right: 0; 
+    width: 210px;
+    height: 100%;
+    background-color: rgb(27, 27, 27);
+    z-index: 1; 
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+/* Classe 'ativo' para exibir o menu */
+.menu-lateral.ativo {
+    /* Move o menu para a tela quando a classe 'ativo' é adicionada */
+    transform: translateX(0);
+}
+/* Header dentro do menu lateral */
+.menu-lateral .conteudo-principal-menu > header{
+    /* Estilo do cabeçalho dentro do menu lateral */
+    padding: 27px;
+    box-shadow: 0 5px 5px #000000b9;
+    color: #fff;
+}
+/* Destaque da letra 'S' no logo do menu */
+.menu-lateral .conteudo-principal-menu .container-conteudo-header span{
+    /* Cor vermelha para a letra 'S' */
+    color: red;
+}
+.menu-lateral .conteudo-principal-menu section button{
+    margin-top: 5px;
+    width: 100%;
+    background-color: #00000000;
+    color: #fff;
+    border: none;
+}
+.menu-lateral h2 {
+    /* Estilo do título "WatchS" no menu lateral */
+    font-size: 24px; 
+    font-family: "Archivo Black", sans-serif; 
+}
+section .secao-filmes-grid .texto-filmes{
+    width: 100%;
+    /* Estilo do título das seções de grid ("Filmes", "Séries") */
+    margin-left: 0px;
+    align-items: center;
+}
+section .secao-filmes-grid .texto-filmes h2{
+    color: #cfcccc;
+    margin: 20px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.titulo-filme-carrousel{
+    /* Estilo para um título de carrossel (atualmente não parece estar em uso) */
+    position: absolute;
+    color: #fff;
+    top: 0;
+}
+.parent{
+    /* Contêiner para o carrossel de grid de filmes/séries */
+    width: 100%; 
+    margin: 0 auto; 
+}
+.parent > .slick-list img {
+    /* Estilo das imagens no carrossel de grid */
+    height: 200px !important;
+    width: 120px !important; 
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+/* Estilos para a barra de navegação inferior */
+section .btn-nav{
+    /* Botão que aciona a barra de navegação inferior */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50vw;
+    height: 25px;
+    cursor: pointer;
+    background-color:rgba(27, 27, 27, 0);
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+}
+.btn-nav .sumir{
+    /* Classe para esconder o botão que aciona a nav */
+    transform: translateY(100%);
+}
+section .nav .btn-esconder-nav{
+    /* Botão 'X' para fechar a barra de navegação */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 236, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+section .btn-nav span{
+    /* Linhas que formam o ícone do botão da nav */
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.534);
+    border-radius: 2px;
     transition: all 0.3s ease;
 }
+section .nav{
+    /* Contêiner da barra de navegação inferior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 70px;
+    z-index: 100;
+    background-color: rgb(27, 27, 27);
+    transform: translateY(100px);
+    transition: transform 0.3s ease-in-out;
+} 
+.nav.nav-ativo{
+    /* Classe que mostra a barra de navegação */
+    transform: translateY(0);
+}
+section .nav button{
+    /* Estilo dos botões dentro da barra de navegação */
+    width: 80%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-left:1px solid #7979796b;
+    border-right:1px solid #7979796b;
+    font-family: "Archivo Black", sans-serif;
+}
+section .nav :hover{
+    /* Efeito ao passar o mouse sobre os botões da nav */
+    background-color: rgba(56, 55, 55, 0.719);
+    border-bottom: 2px solid #000000;
+}
+section .botoes-menu-lateral{
+    /* Contêiner para os botões dentro do menu lateral */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+section .botoes-menu-lateral a{
+    /* Estilo dos links (que parecem botões) no menu lateral */
+    display: block;
+    border-bottom: 1px solid #000000;
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px;
+    color: #000000;
+    width: 100%;
+    height: 40px;
+    
+}
+section .configuração-e-email{
+    /* Contêiner para os botões de rodapé no menu lateral */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+}
+section .configuração-e-email button{
+    /* Estilo dos botões de rodapé no menu lateral */
+    display: block;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    width: 100%;
+    height: 40px;
+}
+/* ===============================================
+    RESPONSIVIDADE (TELAS MAIORES)
+   =============================================== */
+
+/* Media Query para telas com largura mínima de 765px */
+@media ( min-width: 765px){
+    body > header{
+        padding: 12px;
+    }
+    .parent > .slick-list img{
+        /* Aumenta o tamanho das imagens do grid em telas maiores */
+        height: 400px !important;
+        width: 300px !important;
+    }
+    .parent > .slick-list img:hover{
+    /* Efeito de hover para as imagens do grid em telas maiores */
+    transform: translateY(-20px) scale(1.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 10px black;
+    filter: brightness(0.5);
+    }
+    .titulo-filme {
+        font-size: 28px;
+    }
+    section .menu-lateral{
+        /* Aumenta a largura do menu lateral */
+        width: 320px;
+    }
+    .menu-lateral .conteudo-principal-menu > header{
+        padding: 24px;
+    }
+    .menu-lateral h2 {
+        /* Aumenta o tamanho da fonte do título do menu */
+        font-size: 32px; 
+    }
+    header .container-cabecalho img{
+        /* Aumenta o tamanho do logo principal */
+        height: 60px;
+        transform: scale(1.9);
+    }
+}
+
+
+    
