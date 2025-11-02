@@ -20,8 +20,13 @@ body > header{
 }
 body{
     background-color: #2a272a;
+}
+.page-wrapper {
+    width: 100%;
+    overflow-x: hidden; /* Evita barras de rolagem durante a animação */
     margin-top: 70px;
     margin-bottom: 100px;
+    transition: all 0.3s ease-in-out;
 }
 header .container-cabecalho{
     display: flex;
@@ -51,7 +56,7 @@ header .btn-menu span {
     height: 3px;
     background-color: white;
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.20s ease;
 }
 /* ===============================================
     CARROSSEL
@@ -82,7 +87,7 @@ section .carrosel img{
     MENU LATERAL
    =============================================== */
 
-section .menu-lateral{
+.menu-lateral{
     position: fixed;
     top: 0;
     right: 0; 
@@ -94,7 +99,7 @@ section .menu-lateral{
     transition: transform 0.3s ease-in-out;
 }
 /* Classe 'ativo' para exibir o menu */
-section .menu-lateral.ativo {
+.menu-lateral.ativo {
     transform: translateX(0);
 }
 /* Header dentro do menu lateral */

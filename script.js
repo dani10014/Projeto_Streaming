@@ -4,6 +4,8 @@ $(document).ready(function(){
     const $btnNavb = $(".btn-nav");
     const $nav = $(".nav");
     const $btnFechar = $(".btn-esconder-nav");
+    const $btnFilmes = $(".btn-filmes");
+    const $pageWrapper = $(".page-wrapper");
 
     $('.carrosel').slick({
         autoplay:true,
@@ -33,6 +35,13 @@ $(document).ready(function(){
         $btnFechar.css('bottom','100px')
         $btnNavb.removeClass('btn-nav sumir')
         $btnNavb.toggleClass('btn-nav sumir')
+    })
+
+    $btnFilmes.on('click', function(){
+        $pageWrapper.css('transform','translateX(-100%)');
+        setTimeout(function() { 
+            window.location.href = "filmes.html";
+        }, 300); 
     })
 
     $(document).on('click',function(event){
