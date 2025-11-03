@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     // Seleciona os elementos do DOM e os armazena em variáveis para uso posterior
     const $menuLateral = $('.menu-lateral');
     const $btnMenu = $('.btn-menu');
@@ -7,6 +8,7 @@ $(document).ready(function(){
     const $btnFechar = $(".btn-esconder-nav");
     const $btnInicio = $(".btn-inicio");
     const $pageWrapper = $(".page-wrapper");
+
 
     // Inicializa o carrossel principal com autoplay
     $('.carrosel').slick({

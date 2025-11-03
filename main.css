@@ -93,6 +93,17 @@ section .carrosel img{
     z-index: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+.texto-por-cima-capa {
+    /* Estilo para um texto adicional sobre o carrossel (adicionado recentemente) */
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 /* ===============================================
     MENU LATERAL
    =============================================== */
@@ -118,7 +129,7 @@ section .carrosel img{
 .menu-lateral .conteudo-principal-menu > header{
     /* Estilo do cabeçalho dentro do menu lateral */
     padding: 37px;
-    box-shadow: 0 5px 5px #000000b9;
+    box-shadow: 0 2px 5px #000000b9;
     color: #fff;
 }
 .menu-lateral .conteudo-principal-menu{
@@ -148,8 +159,17 @@ section .secao-filmes-grid .texto-filmes{
     margin-left: 0px;
     align-items: center;
 }
+section .secao-filmes-grid .texto-filmes h1{
+    color: #cfcccc;
+    margin: 20px;
+    font-size: 29px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 section .secao-filmes-grid .texto-filmes h2{
     color: #cfcccc;
+    font-size: 27px;
     margin: 20px;
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;
@@ -166,14 +186,43 @@ section .secao-filmes-grid .texto-filmes h2{
     width: 100%; 
     margin: 0 auto; 
 }
-.parent > .slick-list img {
-    /* Estilo das imagens no carrossel de grid */
-    height: 200px !important;
-    width: 120px !important; 
+
+/* A "caixa" que envolve a imagem e o título */
+.card-filme {
+    position: relative; /* Essencial para posicionar o título dentro dele */
+    padding: 0 5px; /* Pequeno espaçamento entre os cards */
+    cursor: pointer;
+}
+
+.card-filme img {
+    /* Estilo das imagens dentro dos cards */
+    width: 100%;
+    height: 200px; /* Altura padrão para telas pequenas */
     object-fit: cover;
     border-radius: 8px;
-    
+    filter: brightness(0.9);
+    display: block; /* Remove pequenos espaços em branco abaixo da imagem */
 }
+
+.card-filme .titulo-card {
+    /* Estilo do título sobre a imagem do card */
+    display: block;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    left: 5px;
+    height: 40px;
+    width: 133px;
+    right: 15px; /* Garante que o texto não vaze para os lados */
+    color: white;
+    font-size: 16px;
+    background-color: #00000046;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius:8px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
 /* Estilos para a barra de navegação inferior */
 section .btn-nav{
     /* Botão que aciona a barra de navegação inferior */
@@ -194,6 +243,10 @@ section .btn-nav{
 .btn-nav .sumir{
     /* Classe para esconder o botão que aciona a nav */
     transform: translateY(100%);
+}
+.item-ativo {
+    /* Estilo para o botão da página atual na barra de navegação */
+    border-bottom: 5px solid #fff !important; /* !important para garantir que sobrescreva outros estilos */
 }
 section .nav .btn-esconder-nav{
     /* Botão 'X' para fechar a barra de navegação */
@@ -229,7 +282,7 @@ section .nav{
     position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 70px;
+    height: 90px;
     z-index: 100;
     background-color: rgb(27, 27, 27);
     transform: translateY(100px);
@@ -302,24 +355,30 @@ section .configuração-e-email button{
     body > header{
         padding: 12px;
     }
-    .parent > .slick-list img{
+    .card-filme img {
         /* Aumenta o tamanho das imagens do grid em telas maiores */
         height: 400px !important;
-        width: 300px !important;
+        filter: brightness(0.7);
     }
-    .parent > .slick-list img:hover{
+
+    .card-filme {
+        transition: transform 0.3s ease-in-out; /* Adiciona transição suave ao card */
+    }
+
+    .card-filme:hover {
+        transform: translateY(-20px); /* Move o card inteiro para cima */
+    }
+
+    .card-filme:hover img{
     /* Efeito de hover para as imagens do grid em telas maiores */
-    transform: translateY(-20px) scale(1.05);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: scale(1.05); /* Mantém o efeito de escala na imagem */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
     box-shadow: 0 10px 10px black;
     filter: brightness(0.5);
     }
+
     .titulo-filme {
         font-size: 28px;
-    }
-    section .menu-lateral{
-        /* Aumenta a largura do menu lateral */
-        width: 320px;
     }
     .menu-lateral .conteudo-principal-menu > header{
         padding: 38px;
@@ -333,8 +392,18 @@ section .configuração-e-email button{
         height: 60px;
         transform: scale(1.9);
     }
-
+    .card-filme .titulo-card {
+        font-size: 20px;
+        width: 447px;
+        padding-top: 30px;
+        height: 100px;
+        text-align: center;
+    }
+    .menu-lateral .conteudo-principal-menu{
+        margin-top: 110px;
+    }
 }
+
 
 
     
